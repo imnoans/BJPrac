@@ -53,10 +53,10 @@ dfs() method를 0을 argument로써 호출한다
     bw.write(sb.toString());
     bw.close();
 
-dfs() method는 다음과 같다. 우선 현재 수열의 길이를 의미하는 count,
-이 수열의 전에 입력된 수 v를 parameter로서 받아온다.
+dfs() method는 다음과 같다. 우선 현재 수열의 길이를 의미하는 count를
+ parameter로서 받아온다.
 
-    public static void dfs(int v, int count)
+    public static void dfs(int count)
 
 만약 count가 m이라면 수열이 완성되었으므로 결과문에 추가한다
 
@@ -70,8 +70,8 @@ dfs() method는 다음과 같다. 우선 현재 수열의 길이를 의미하는
         return;
     }
 
-이 수열이 아직 완성되지 않았다면 오름차순 수열이므로 전에 입력된 v보다 큰 n 까지의 수를
-결과문을 출력할 arr에 저장한다. 그 후 수열의 다음 수를 정하기 위해 dfs(count + 1)을 호출한다.
+이 수열이 아직 완성되지 않았다면 n 까지의 수를 결과문을 출력할 arr에 저장한다.
+그 후 수열의 다음 수를 정하기 위해 dfs(count + 1)을 호출한다.
 
     for(int i = 0; i < n; i++)
     {
